@@ -1,0 +1,40 @@
+{{>header}}
+
+<h1>Select Days {{username}}</h1>
+
+{{#if messages.success}} 
+<div class="alert alert-success" role="alert">
+  {{messages.success}}
+</div>
+{{/if}}
+
+<form action="/waiters/{{username}}" method="POST">
+<div class="form-check">
+  <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" name="days" value="Monday" {{#if userDays.Monday}}checked{{/if}}>Monday
+  </label>
+
+ <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" name="days" value="Tuesday" {{#if userDays.Tuesday}}checked{{/if}}>Tuesday
+ </label>
+ <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" name="days" value="Wednesday" {{#if userDays.Wednesday}}checked{{/if}}>Wednesday
+   </label>
+   <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" name="days" value="Thursday" {{#if userDays.Thursday}}checked{{/if}}>Thursday
+</label>
+
+   <label class="form-check-label">
+      <input class="form-check-input" type="checkbox" name="days" value="Friday" {{#if userDays.Friday}}checked{{/if}}>Friday
+  </label>
+
+   <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" name="days" value="Saturday" {{#if userDays.Saturday}}checked{{/if}}>Saturday
+  </label>
+
+    <label class="form-check-label">
+    <input class="form-check-input" type="checkbox" name="days" value="Sunday" {{#if userDays.Sunday}}checked{{/if}}>Sunday
+    </label>
+     <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>

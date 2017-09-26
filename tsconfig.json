@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es5",
+        "outDir": "./compiled"
+    },
+    "files": [
+        "./server.ts",
+        "./index.ts",
+        "./src/routes/routes.ts"
+    ]
+}
